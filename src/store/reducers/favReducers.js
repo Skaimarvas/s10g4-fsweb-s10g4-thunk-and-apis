@@ -40,7 +40,7 @@ export const favReducers = (state = initialState, action) => {
         favs: state.favs.filter((item) => item.id !== action.payload),
       };
       writeFavsToLocalStorage(favRem);
-      toast.success("Favorilerden Çıkarıldı");
+      toast.warn("Favorilerden Çıkarıldı");
       return favRem;
       break;
 
