@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAnother } from "./store/actions/jokeActions";
 import { addFav } from "./store/actions/favActions";
 import { getFavsFromLocalStorage } from "./store/actions/favActions";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   const loading = useSelector((store) => store.jokes.loading);
@@ -86,6 +88,7 @@ export default function App() {
           </div>
         </Route>
       </Switch>
+      <ToastContainer />
     </div>
   );
 }

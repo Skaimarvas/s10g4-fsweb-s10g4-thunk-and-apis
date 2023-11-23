@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { FAV_ADD, FAV_REMOVE, GET_FAVS_FROM_LS } from "../actions/favActions";
 
 const initialState = {
@@ -28,8 +29,10 @@ export const favReducers = (state = initialState, action) => {
           ? [...state.favs, action.payload]
           : state.favs,
       };
+      toast("Favorilere Eklendi");
       writeFavsToLocalStorage(favAdd);
       return favAdd;
+      break;
 
     case FAV_REMOVE:
       const favRem = {
@@ -37,10 +40,14 @@ export const favReducers = (state = initialState, action) => {
         favs: state.favs.filter((item) => item.id !== action.payload),
       };
       writeFavsToLocalStorage(favRem);
+      toast("Favorilerden Çıkarıldı");
       return favRem;
+      break;
 
     case GET_FAVS_FROM_LS:
+      toast("Sayfa ve favoriler yüklendi.");
       return { ...state, favs: storageData };
+      break;
 
     default:
       return state;

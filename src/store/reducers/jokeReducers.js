@@ -19,15 +19,18 @@ export function jokesReducer(state = initial, action) {
   switch (action.type) {
     case FETCH_SUCCESS:
       return { ...state, current: action.payload };
+      break;
 
     case FETCH_LOADING:
       return { ...state, loading: action.payload };
+      break;
 
     case FETCH_ERROR:
       return {
         ...state,
         error: action.payload,
       };
+      break;
 
     default:
       return state;
