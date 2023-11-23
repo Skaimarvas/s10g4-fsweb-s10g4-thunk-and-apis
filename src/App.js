@@ -4,15 +4,17 @@ import Item from "./components/Item";
 import FavItem from "./components/FavItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnother } from "./store/actions/jokeActions";
+import { addFav } from "./store/actions/favActions";
 
 export default function App() {
-  const loading = false;
+  const loading = useSelector((store) => store.jokes.loading);
   const current = useSelector((store) => store.jokes.current);
-  console.log("CURRENT", current);
   const favs = useSelector((store) => store.favs.favs);
   const dispatch = useDispatch();
 
-  function addToFavs() {}
+  function addToFavs() {
+    dispatch(addFav(current));
+  }
 
   useEffect(() => {
     dispatch(fetchAnother());
@@ -55,8 +57,8 @@ export default function App() {
               Başka bir tane
             </button>
             <button
-              onClick={addToFavs}
               className="select-none px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white"
+              onClick={() => addToFavs()}
             >
               Favorilere ekle
             </button>
@@ -69,6 +71,7 @@ export default function App() {
               favs.map((item) => (
                 <FavItem
                   key={item.id}
+                  id={item.id}
                   joke={item.setup}
                   punchline={item.punchline}
                 />
