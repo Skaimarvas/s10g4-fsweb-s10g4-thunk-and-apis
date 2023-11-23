@@ -18,13 +18,16 @@ const initial = {
 export function jokesReducer(state = initial, action) {
   switch (action.type) {
     case FETCH_SUCCESS:
-      return { current: action.payload };
+      return { ...state, current: action.payload };
 
     case FETCH_LOADING:
-      return state;
+      return { ...state, loading: action.payload };
 
     case FETCH_ERROR:
-      return state;
+      return {
+        ...state,
+        error: action.payload,
+      };
 
     default:
       return state;

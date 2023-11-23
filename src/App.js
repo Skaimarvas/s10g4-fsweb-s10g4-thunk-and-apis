@@ -26,6 +26,9 @@ export default function App() {
           exact
           className="py-3 px-6 "
           activeClassName="bg-white shadow-sm text-blue-600"
+          onClick={() => {
+            dispatch(fetchAnother());
+          }}
         >
           Rastgele
         </NavLink>
