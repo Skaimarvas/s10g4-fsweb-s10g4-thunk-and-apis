@@ -18,7 +18,7 @@ const initial = {
 export function jokesReducer(state = initial, action) {
   switch (action.type) {
     case FETCH_SUCCESS:
-      return state;
+      return { current: action.payload };
 
     case FETCH_LOADING:
       return state;

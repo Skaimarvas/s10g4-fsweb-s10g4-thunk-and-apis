@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Item from "./components/Item";
 import FavItem from "./components/FavItem";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAnother } from "./store/actions/jokeActions";
 
 export default function App() {
   const loading = false;
   const current = useSelector((store) => store.jokes.current);
   console.log("CURRENT", current);
   const favs = [];
+  const dispatch = useDispatch();
 
   function addToFavs() {}
+
+  useEffect(() => {
+    dispatch(fetchAnother());
+  }, []);
 
   return (
     <div className="wrapper max-w-xl mx-auto px-4">
