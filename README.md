@@ -45,7 +45,7 @@ Bu projede kullanmak için öncelikle bir API seçmelisiniz. [Bu adresten](https
 
 * [x] `Store` içerisindeki verileri kullanmak istediğiniz yerlerde kullanmak için gerekli kısımları ekleyin.
 
-* [ ] Sayfadaki `Favorilere Ekle` kısmında kullanmak için gerekli actionu ve reducer bölümünü ekleyin.
+* [x] Sayfadaki `Favorilere Ekle` kısmında kullanmak için gerekli actionu ve reducer bölümünü ekleyin.
 
 ### Görev 3: Favorilenenleri LocalStorage içerisine eklemek/buradan kullanmak
 

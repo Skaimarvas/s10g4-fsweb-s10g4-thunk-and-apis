@@ -22,12 +22,14 @@ function readFavsFromLocalStorage() {
 export const favReducers = (state = initialState, action) => {
   switch (action.type) {
     case FAV_ADD:
-      return {
+      const favEkle = {
         ...state,
         favs: !state.favs.includes(action.payload)
           ? [...state.favs, action.payload]
           : state.favs,
       };
+      writeFavsToLocalStorage(favEkle);
+      return favEkle;
 
     case FAV_REMOVE:
       return {
