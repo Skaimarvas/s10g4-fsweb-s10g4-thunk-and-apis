@@ -20,10 +20,10 @@ export const fetchError = (error) => {
 export const fetchAnother =
   () =>
   //thunk function
-  (dispatch, getState) => {
+  (dispatch) => {
     dispatch(fetchLoading(true));
     axios
-      .get("https://official-joke-api.appspot.com/random_jok")
+      .get("https://official-joke-api.appspot.com/random_joke")
       .then((res) => {
         dispatch(fetchJoke(res.data));
         dispatch(fetchLoading(false));

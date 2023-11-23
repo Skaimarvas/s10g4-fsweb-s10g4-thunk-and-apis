@@ -9,7 +9,7 @@ export default function App() {
   const loading = false;
   const current = useSelector((store) => store.jokes.current);
   console.log("CURRENT", current);
-  const favs = [];
+  const favs = useSelector((store) => store.favs.favs);
   const dispatch = useDispatch();
 
   function addToFavs() {}
@@ -26,9 +26,6 @@ export default function App() {
           exact
           className="py-3 px-6 "
           activeClassName="bg-white shadow-sm text-blue-600"
-          onClick={() => {
-            dispatch(fetchAnother());
-          }}
         >
           Rastgele
         </NavLink>
@@ -49,7 +46,12 @@ export default function App() {
           {current && <Item data={current} />}
 
           <div className="flex gap-3 justify-end py-3">
-            <button className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500">
+            <button
+              className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
+              onClick={() => {
+                dispatch(fetchAnother());
+              }}
+            >
               Başka bir tane
             </button>
             <button
@@ -65,7 +67,11 @@ export default function App() {
           <div className="flex flex-col gap-3">
             {favs.length > 0 ? (
               favs.map((item) => (
-                <FavItem key={item.key} id={item.key} title={item.activity} />
+                <FavItem
+                  key={item.id}
+                  joke={item.setup}
+                  punchline={item.punchline}
+                />
               ))
             ) : (
               <div className="bg-white p-6 text-center shadow-md">
