@@ -47,7 +47,7 @@ export default function App() {
           {loading && (
             <div className="bg-white p-6 text-center shadow-md">YÜKLENİYOR</div>
           )}
-          {current && <Item data={current} />}
+          {loading || (current && <Item data={current} />)}
 
           <div className="flex gap-3 justify-end py-3">
             <button
