@@ -34,5 +34,6 @@ export function jokesReducer(state = initial, action) {
 
     default:
       return state;
+      break;
   }
 }

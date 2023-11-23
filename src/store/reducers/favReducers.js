@@ -29,7 +29,7 @@ export const favReducers = (state = initialState, action) => {
           ? [...state.favs, action.payload]
           : state.favs,
       };
-      toast("Favorilere Eklendi");
+      toast.success("Favorilere Eklendi");
       writeFavsToLocalStorage(favAdd);
       return favAdd;
       break;
@@ -40,16 +40,17 @@ export const favReducers = (state = initialState, action) => {
         favs: state.favs.filter((item) => item.id !== action.payload),
       };
       writeFavsToLocalStorage(favRem);
-      toast("Favorilerden Çıkarıldı");
+      toast.success("Favorilerden Çıkarıldı");
       return favRem;
       break;
 
     case GET_FAVS_FROM_LS:
-      toast("Sayfa ve favoriler yüklendi.");
+      toast.info("Sayfa ve favoriler yüklendi.");
       return { ...state, favs: storageData };
       break;
 
     default:
       return state;
+      break;
   }
 };

@@ -49,18 +49,18 @@ Bu projede kullanmak için öncelikle bir API seçmelisiniz. [Bu adresten](https
 
 ### Görev 3: Favorilenenleri LocalStorage içerisine eklemek/buradan kullanmak
 
-- [ ] İlgili reducer parçalarının içerisinde, size sağlanmış olan `readFavsFromLocalStorage` ve `writeFavsToLocalStorage` fonksiyonlarını kullanın ve uygulamada yaptığımız favorilere ekleme işlemlerinin sonuçlarını saklamamızı sağlayın.
+- [x] İlgili reducer parçalarının içerisinde, size sağlanmış olan `readFavsFromLocalStorage` ve `writeFavsToLocalStorage` fonksiyonlarını kullanın ve uygulamada yaptığımız favorilere ekleme işlemlerinin sonuçlarını saklamamızı sağlayın.
 
 ### Görev 4: react-toastify ile favorilere ekleme işlemi sonrası bildirim vermek ve bildirim sonrasında API'dan yeni bir oge almak
 
-- [ ] Projenize `react-toastify` paketini ekleyin.
+- [x] Projenize `react-toastify` paketini ekleyin.
 
-- [ ] Gerekli ayarlamaları yapın ve bir öge favorilere eklendikten sonra bir başarı toast mesajı görüntüleyin.
+- [x] Gerekli ayarlamaları yapın ve bir öge favorilere eklendikten sonra bir başarı toast mesajı görüntüleyin.
 
-- [ ] Bildirim kaybolmaya yakınken, API'dan tekrar bir öge isteyin.
+- [x] Bildirim kaybolmaya yakınken, API'dan tekrar bir öge isteyin.
 
 ### Esnek Görevler
 
 - [ ] Proje stillerini kendi istediğiniz şekilde değiştirmeye çalışın.
 
-- [ ] LocalStorage içerisindeki verileri sıfırlama opsiyonu ekleyin.
+- [x] LocalStorage içerisindeki verileri sıfırlama opsiyonu ekleyin.
