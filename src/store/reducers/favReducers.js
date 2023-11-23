@@ -1,17 +1,7 @@
-import {
-  FAV_ADD,
-  FAV_REMOVE,
-  FETCH_SUCCESS,
-  FETCH_LOADING,
-  FETCH_ERROR,
-  GET_FAVS_FROM_LS,
-} from "./actions";
+import { FAV_ADD, FAV_REMOVE, GET_FAVS_FROM_LS } from "../actions/jokeActions";
 
-const initial = {
+const initialState = {
   favs: [],
-  current: null,
-  error: null,
-  loading: true,
 };
 
 function writeFavsToLocalStorage(state) {
@@ -22,21 +12,12 @@ function readFavsFromLocalStorage() {
   return JSON.parse(localStorage.getItem("s10g4"));
 }
 
-export function myReducer(state = initial, action) {
+export const favReducers = (state = initialState, action) => {
   switch (action.type) {
     case FAV_ADD:
       return state;
 
     case FAV_REMOVE:
-      return state;
-
-    case FETCH_SUCCESS:
-      return state;
-
-    case FETCH_LOADING:
-      return state;
-
-    case FETCH_ERROR:
       return state;
 
     case GET_FAVS_FROM_LS:
@@ -45,4 +26,4 @@ export function myReducer(state = initial, action) {
     default:
       return state;
   }
-}
+};

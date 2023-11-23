@@ -1,9 +1,8 @@
 import { combineReducers, legacy_createStore as createStore } from "redux";
-import { jokeReducers } from "./reducers/jokeReducer";
+import { jokesReducer } from "./reducers/jokeReducers";
 
-const reducers = combineReducers({
-  jokes: jokeReducers,
-  favs: "",
-});
+// const reducers = combineReducers({
+//     jokes:
+// })
 
-export const store = createStore(reducers);
+export const store = createStore(jokesReducer);

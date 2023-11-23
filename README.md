@@ -12,11 +12,11 @@ Daha önceki günlerde redux store'u oluşturmayı, middleware kavramını, useS
 
 ### Görev 1: Proje Kurulumu
 
-- [ ] Forklayın.
-- [ ] Klonlayın
-- [ ] Ana dizine gidin
-- [ ] `npm install`
-- [ ] `npm start`
+- [x] Forklayın.
+- [x] Klonlayın
+- [x] Ana dizine gidin
+- [x] `npm install`
+- [x] `npm start`
 
 ### Görev 2: Proje Gereksinimleri
 
@@ -29,13 +29,13 @@ Bu projede kullanmak için öncelikle bir API seçmelisiniz. [Bu adresten](https
 - "Favoriler" kısmında daha önce favorilere eklenmiş ögeler görüntülenmeli
 - "Favoriler" localStorage içerisinde tutulmalı ve uygulama ilk açıldığında localStorage içerisinde bu amaçla saklanmış veri varsa kontrol edilmeli ve kullanılmalı.
 
-* [ ] Projeyi inceleyin ve componentların birbiriyle ilişkisini anlayın.
+* [x] Projeyi inceleyin ve componentların birbiriyle ilişkisini anlayın.
 
-* [ ] Kullanmak için bir API seçin. Burada fazla vakit kaybetmeyin, hoşunuza giden biri ile başlayın.
+* [x] Kullanmak için bir API seçin. Burada fazla vakit kaybetmeyin, hoşunuza giden biri ile başlayın.
 
-* [ ] `redux` ve `react-redux` paketleri sizin için eklendi. Siz de `redux-thunk` paketini kurun ve store oluşturma aşamasında ilgili yerde kullanın.
+* [x] `redux` ve `react-redux` paketleri sizin için eklendi. Siz de `redux-thunk` paketini kurun ve store oluşturma aşamasında ilgili yerde kullanın.
 
-* [ ] Projeye `axios` paketini ekleyin.
+* [x] Projeye `axios` paketini ekleyin.
 
 * [ ] `actions.js` içerisindeki `fetchAnother` isimli action creator async olmalı ve seçtiğiniz API'dan veri almalı. Derste öğrendiklerinizi kullanarak bu actionu oluşturun ve içerisindeki farklı durumlarda farklı actionlar dispatch edin.
 
