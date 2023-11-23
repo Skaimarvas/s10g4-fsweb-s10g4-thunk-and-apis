@@ -1,8 +1,16 @@
-import { combineReducers, legacy_createStore as createStore } from "redux";
+import {
+  applyMiddleware,
+  combineReducers,
+  legacy_createStore as createStore,
+} from "redux";
 import { jokesReducer } from "./reducers/jokeReducers";
+import { favReducers } from "./reducers/favReducers";
 
-// const reducers = combineReducers({
-//     jokes:
-// })
+import logger from "redux-logger";
 
-export const store = createStore(jokesReducer);
+const reducers = combineReducers({
+  jokes: jokesReducer,
+  favs: favReducers,
+});
+
+export const store = createStore(reducers, applyMiddleware(logger));

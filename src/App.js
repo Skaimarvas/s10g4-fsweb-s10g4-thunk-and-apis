@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 export default function App() {
   const loading = false;
-  const current = useSelector((store) => store.deneme);
+  const current = useSelector((store) => store.jokes.current);
   console.log("CURRENT", current);
   const favs = [];
 

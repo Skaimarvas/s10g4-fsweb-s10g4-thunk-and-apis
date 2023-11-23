@@ -5,7 +5,12 @@ import {
 } from "../actions/jokeActions";
 
 const initial = {
-  current: null,
+  current: {
+    type: "general",
+    setup: "How do you make the number one disappear?",
+    punchline: "Add the letter G and it’s “gone”!",
+    id: 392,
+  },
   error: null,
   loading: true,
 };

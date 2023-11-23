@@ -1,4 +1,4 @@
-import { FAV_ADD, FAV_REMOVE, GET_FAVS_FROM_LS } from "../actions/jokeActions";
+import { FAV_ADD, FAV_REMOVE, GET_FAVS_FROM_LS } from "../actions/favActions";
 
 const initialState = {
   favs: [],
