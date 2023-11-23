@@ -5,6 +5,7 @@ import FavItem from "./components/FavItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnother } from "./store/actions/jokeActions";
 import { addFav } from "./store/actions/favActions";
+import { getFavsFromLocalStorage } from "./store/actions/favActions";
 
 export default function App() {
   const loading = useSelector((store) => store.jokes.loading);
@@ -18,6 +19,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(fetchAnother());
+    dispatch(getFavsFromLocalStorage());
   }, []);
 
   return (

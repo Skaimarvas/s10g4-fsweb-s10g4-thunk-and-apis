@@ -18,7 +18,7 @@ function writeFavsToLocalStorage(state) {
 function readFavsFromLocalStorage() {
   return JSON.parse(localStorage.getItem("s10g4"));
 }
-
+const storageData = readFavsFromLocalStorage();
 export const favReducers = (state = initialState, action) => {
   switch (action.type) {
     case FAV_ADD:
@@ -38,7 +38,7 @@ export const favReducers = (state = initialState, action) => {
       };
 
     case GET_FAVS_FROM_LS:
-      return state;
+      return { ...state, favs: storageData };
 
     default:
       return state;
